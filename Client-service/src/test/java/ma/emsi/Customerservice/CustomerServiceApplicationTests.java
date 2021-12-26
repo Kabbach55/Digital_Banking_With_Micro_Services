@@ -1,10 +1,10 @@
-package ma.emsi.Clientservice;
+package ma.emsi.Customerservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ClientServiceApplicationTests {
+class CustomerServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
