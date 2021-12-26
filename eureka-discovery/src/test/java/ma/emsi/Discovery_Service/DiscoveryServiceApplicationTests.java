@@ -1,10 +1,10 @@
-package ma.emsi.eurekadiscovery;
+package ma.emsi.Discovery_Service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaDiscoveryApplicationTests {
+class DiscoveryServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
