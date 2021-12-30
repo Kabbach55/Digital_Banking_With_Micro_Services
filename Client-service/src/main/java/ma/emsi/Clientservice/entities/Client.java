@@ -1,4 +1,4 @@
-package ma.emsi.Customerservice.entities;
+package ma.emsi.Clientservice.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,8 +20,9 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long code;
-    private String name;
-    private String adresse;
-    private String numTelephone;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String identificationNumber;
 
 }

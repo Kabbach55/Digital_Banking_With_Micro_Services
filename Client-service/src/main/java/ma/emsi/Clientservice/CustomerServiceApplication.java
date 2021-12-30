@@ -1,7 +1,7 @@
-package ma.emsi.Customerservice;
+package ma.emsi.Clientservice;
 
-import ma.emsi.Customerservice.entities.Client;
-import ma.emsi.Customerservice.repositories.ClientRepository;
+import ma.emsi.Clientservice.entities.Client;
+import ma.emsi.Clientservice.repositories.ClientRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,11 +16,13 @@ public class CustomerServiceApplication {
 	}
 
 	@Bean
-	CommandLineRunner start(ClientRepository clientRepository){
+	CommandLineRunner start(ClientRepository clientRepository,
+							RepositoryRestConfiguration restConfiguration){
 
 		return args -> {
-			clientRepository.save(new Client(null,"zakaria","cd , casablanca","0659661575"));
-			clientRepository.save(new Client(null,"kabbach","anfa , casablanca","0659661575"));
+			restConfiguration.exposeIdsFor(Client.class);
+			clientRepository.save(new Client(null,"zakaria","kabbach","zakaria@gmail.com","11"));
+			clientRepository.save(new Client(null,"zakaria","kabbach","zakaria@gmail.com","11"));
 			clientRepository.findAll().forEach(System.out::println);
 		};
 	}
