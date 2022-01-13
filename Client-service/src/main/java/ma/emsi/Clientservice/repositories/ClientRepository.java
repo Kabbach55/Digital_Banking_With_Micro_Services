@@ -1,6 +1,6 @@
-package ma.emsi.Customerservice.repositories;
+package ma.emsi.Clientservice.repositories;
 
-import ma.emsi.Customerservice.entities.Client;
+import ma.emsi.Clientservice.entities.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
